@@ -18,6 +18,15 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Proxima Nova';
+  src: local('Proxima Nova Semibold'), local('Proxima-Nova-Semibold'),
+    url(../fonts/ProximaNova-Semibold.woff2) format('woff2'),
+    url(../fonts/ProximaNova-Semibold.woff) format('woff'),
+    url(..//fonts/ProximaNova-Semibold.ttf) format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
 
 * {
   margin: 0;
@@ -79,6 +88,7 @@ body {
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
     url(../images/header-background-image.jpg);
+  background-attachment: fixed;
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -147,9 +157,16 @@ h1 {
 .main-nav li a {
   text-decoration: none;
   color: #1a1a1a;
+  font-weight: 600;
   letter-spacing: 3px;
 }
 
+.main-nav li:first-of-type a {
+  color: #c2c2c2;
+}
+.main-nav li a:hover {
+  color: rgba(26, 26, 26, 0.7);
+}
 nav {
   height: 70px;
   background-color: #ffffff;
@@ -165,7 +182,8 @@ nav {
   font-weight: 400;
   letter-spacing: 1px;
 }
-.button {
+.button:link,
+.button:visited {
   display: inline-block;
   padding: 10px 30px;
   text-decoration: none;
@@ -174,6 +192,38 @@ nav {
   border-radius: 5px;
   border: 1px solid #f85191;
 }
-.button-more {
+.button-more:link,
+.button-more:visited {
   background: none;
+}
+.button:hover,
+.button:active {
+  background-color: #b13061;
+  border: 1px solid #b13061;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+.photo {
+  padding-top: 50px;
+}
+.main-photo {
+  margin-left: 16.66%;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+.main-photo,
+.any-photo {
+  padding: 0;
+}
+.article {
+  margin-right: 16.66%;
+  margin-bottom: 25px;
+}
+.main-photo img {
+  width: 100%;
+  height: auto;
+}
+.any-photo img {
+  width: 100%;
+  height: auto;
 }
