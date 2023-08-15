@@ -37,7 +37,8 @@
 body {
   background: #ffffff;
   color: #565252;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Proxima Nova';
+  /* font-family: 'Roboto', sans-serif; */
   font-weight: 400;
   font-size: 14px;
   text-rendering: optimizeLegibility;
@@ -83,9 +84,9 @@ body {
 [class*='col-'] {
   float: left;
   padding: 15px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
-header {
+.header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
     url(../images/header-background-image.jpg);
   background-attachment: fixed;
@@ -116,6 +117,7 @@ h1 {
   color: #171717;
   letter-spacing: 0.179487em;
   font-size: 2.8em;
+  font-family: 'Futura PT';
   line-height: 1em;
   font-weight: 400;
   font-style: normal;
@@ -202,22 +204,47 @@ nav {
   border: 1px solid #b13061;
   transition: background-color 0.3s, border 0.3s;
 }
-
+/*********************************
+Section photo
+**********************************/
 .photo {
   padding-top: 50px;
+  max-width: 960px;
+  height: 80vh;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 .main-photo {
-  margin-left: 16.66%;
-  margin-right: 25px;
   margin-bottom: 25px;
 }
 .main-photo,
 .any-photo {
   padding: 0;
+  /* margin-right: 25px; */
 }
 .article {
-  margin-right: 16.66%;
-  margin-bottom: 25px;
+  padding: 0 0 0 30px;
+}
+.article h2 {
+  color: #16161d;
+  font-size: 2em;
+  line-height: 1.68em;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.article p {
+  font-size: 14px;
+  color: #363636;
+  font-weight: 400;
+  margin: 14px 0;
+  line-height: 1.5em;
+}
+.article p:last-of-type {
+  margin-bottom: 0;
+}
+.photos {
+  float: left;
 }
 .main-photo img {
   width: 100%;
@@ -226,4 +253,43 @@ nav {
 .any-photo img {
   width: 100%;
   height: auto;
+}
+
+/*********************************
+Section unic
+**********************************/
+.unic {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url(../images/SpicyTunaTareTare.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  /* min-height: 66.67vh; */
+  height: 66.67vh;
+}
+#unic-title {
+  max-width: 27%;
+  margin-left: 8.33%;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  padding: 15px;
+  text-transform: uppercase;
+  color: #171717;
+  letter-spacing: 0.179487em;
+  font-size: 2.8em;
+  font-family: 'Futura PT';
+  line-height: 1em;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.unic-headline {
+  margin-left: 8.33%;
+  background-color: #ffffff;
+  padding: 15px;
+  max-width: 42%;
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
